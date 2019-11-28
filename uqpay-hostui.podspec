@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.requires_arc   = true
 
   s.homepage       = "https://github.com/uqpaytechnology/host-ui-sdk-ios"
-  s.source         = { :git => "https://github.com/uqpaytechnology/host-ui-sdk-ios.git", :tag => "v1.0.0" }
+  s.source         = { :git => "https://github.com/uqpaytechnology/host-ui-sdk-ios.git", :tag => s.version }
 
 
   s.default_subspecs = %w[HostUI]
