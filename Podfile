@@ -10,7 +10,7 @@ abstract_target 'abstract_pod' do
     pod 'WHToast', '~>0.0.2'
     pod 'AFNetworking', '~>3.2'
 #    pod 'CardIO', '~>5.4'
-    # pod "UQHostUI", :path => "./"
+    pod "UQHostUI", :path => "./"
   end
 
   target 'UQPayHostUI' do
