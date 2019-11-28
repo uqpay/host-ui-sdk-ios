@@ -38,6 +38,7 @@ Pod::Spec.new do |s|
     s.dependency "JSONModel", '~>1.8.0'
     s.dependency "AFNetworking", '~>3.2.1'
     s.dependency "WHToast", '~>0.0.2'
-    s.dependency "uqpay-hostui/UIKit"
+    s.dependency "CardIO", '~>5.4.1'
+    s.dependency "UQHostUI/UIKit"
   end
 end

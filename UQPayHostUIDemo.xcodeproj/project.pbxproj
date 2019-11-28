@@ -461,6 +461,12 @@
 		ABC4E12222E70D1200C99D18 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		ABC4E12322E70D1200C99D18 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		ABC4E12422E70D5800C99D18 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BTUI.strings"; sourceTree = "<group>"; };
+		ABD247F6238FBD7D0099F26D /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD247F8238FBD7D0099F26D /* WHToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WHToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD247FA238FBDAE0099F26D /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD247FC238FBDAE0099F26D /* WHToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WHToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD247FE238FBDBD0099F26D /* JSONModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JSONModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABD24800238FBDBD0099F26D /* WHToast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WHToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABEFA15622D2EC2E00768AE1 /* UQDropInUIUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UQDropInUIUtilities.h; sourceTree = "<group>"; };
 		ABEFA15722D2EC2E00768AE1 /* UQDropInUIUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UQDropInUIUtilities.m; sourceTree = "<group>"; };
 		ABEFA15E22D35F9300768AE1 /* UQHttpClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UQHttpClient.h; sourceTree = "<group>"; };
@@ -522,6 +528,12 @@
 		015EB3F703DBA37842620F4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABD247FE238FBDBD0099F26D /* JSONModel.framework */,
+				ABD24800238FBDBD0099F26D /* WHToast.framework */,
+				ABD247FA238FBDAE0099F26D /* JSONModel.framework */,
+				ABD247FC238FBDAE0099F26D /* WHToast.framework */,
+				ABD247F6238FBD7D0099F26D /* JSONModel.framework */,
+				ABD247F8238FBD7D0099F26D /* WHToast.framework */,
 				AB9A667422E82D2100A09A32 /* UQPayHostUI.framework */,
 				AB96EC0C22E05F4A009395AF /* da.lproj */,
 				AB96EC2A22E05F4B009395AF /* de.lproj */,

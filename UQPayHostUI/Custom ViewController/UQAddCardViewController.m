@@ -68,11 +68,6 @@
     [super viewDidLoad];
     [self initUI];
     [self setupForms];
-//    [self resetForm];
-//    [self showLoadingScreen: YES];
-//    [self loadConfiguration];
-//    [self updateFormBorders];
-//    [self test];
 }
 
 - (void)initUI{
@@ -197,13 +192,6 @@
 }
 
 - (void)presentCardIO {
-    Class kCardIOPaymentViewController = NSClassFromString(@"CardIOPaymentViewController");
-    id scanViewController = [[kCardIOPaymentViewController alloc] initWithPaymentDelegate:self];
-    [scanViewController setNavigationBarTintColor:[[UINavigationBar appearance] barTintColor]];
-    [scanViewController setHideCardIOLogo:YES];
-    [scanViewController setCollectCVV:NO];
-    [scanViewController setCollectExpiry:NO];
-    [self presentViewController:scanViewController animated:YES completion:nil];
 }
 
 - (void)userDidCancelPaymentViewController:(UIViewController *)scanViewController {
