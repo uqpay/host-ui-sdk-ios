@@ -1,6 +1,6 @@
 # UQPAY IOS Host-UI Demo
 
-UQPAY Host-UI is a readymade UI that allows you to accept card in your app.
+UQPAY Host-UI is a ready made UI that allows you to accept card in your app.
 
 **Info**
 ---
