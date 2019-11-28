@@ -33,7 +33,7 @@
 
 - (void)UQHostResult:(UQHostResult *)model {
     NSLog(@"panTail = %@", model.panTail);
-    NSLog(@"uuid = %@",model.uuid);
+    NSLog(@"cardToken = %@",model.cardToken);
     NSLog(@"ussuer = %@", model.issuer);
     [self.hostViewController dismissViewControllerAnimated:YES completion:nil];
 }
