@@ -1,0 +1,98 @@
+/*
+ BTUI.strings
+ UQPayHostUIKit
+ 
+ Created by uqpay on 2019/6/17.
+ Copyright © 2019 优钱付. All rights reserved.
+ */
+"CARD_DETAILS_LABEL"                        = "卡详细信息";
+"ENTER_CARD_DETAILS_HELP_LABEL"             = "从卡号开始输入您的卡详细信息。";
+"VALID_CARD_ERROR_LABEL"                    = "您必须提供有效的卡号。";
+"CARD_REQUIRED"                             = "卡号为必填项";
+"CARD_INVALID"                              = "卡号无效";
+"EXPIRATION_REQUIRED"                       = "有效期限为必填项";
+"EXPIRATION_INVALID"                        = "有效期限无效";
+"CVV_REQUIRED"                              = "%s为必填项";
+"CVV_INVALID"                               = "%s无效";
+"POSTAL_CODE_HELP_LABEL"                    = "您必须提供有效的邮政编码。";
+"POSTAL_CODE_REQUIRED"                      = "邮政编码为必填项";
+"POSTAL_CODE_INVALID"                       = "邮政编码无效";
+"COUNTRY_CODE_REQUIRED"                     = "国家或地区代码为必填项";
+"COUNTRY_CODE_INVALID"                      = "国家或地区代码无效";
+"MOBILE_NUMBER_REQUIRED"                    = "手机号码为必填项";
+"MOBILE_NUMBER_INVALID"                     = "手机号码无效";
+"ENROLLMENT_WITH_SMS_HELP_LABEL"            = "此卡可能需要登记。如果需要，短信验证码将发送到此号码。";
+"SMS_CODE_REQUIRED"                         = "短信验证码为必填项";
+"SMS_CODE_INVALID"                          = "短信验证码无效";
+
+"CANCEL_ACTION"                             = "取消";
+"RETRY_ACTION"                              = "重试";
+"CONTINUE_ACTION"                           = "继续";
+"ADD_CARD_ACTION"                           = "添加";
+"DONE_ACTION"                               = "完成";
+"EDIT_ACTION"                               = "编辑";
+"NEXT_ACTION"                               = "下一步";
+"TOP_LEVEL_ERROR_ALERT_VIEW_OK_BUTTON_TEXT" = "确定";
+"SCAN_CARD_IO_ACTION"                       = "用相机扫描";
+
+"EDIT_PAYMENT_METHOD"                       = "编辑付款方式";
+"THERE_WAS_AN_ERROR"                        = "抱歉，出现了一个错误。";
+"REVIEW_AND_TRY_AGAIN"                      = "请检查您的信息，然后重试。";
+"INVALID_LABEL"                             = "无效：";
+
+"YEAR_LABEL"                                = "年";
+"MONTH_LABEL"                               = "月";
+
+"OTHER_LABEL"                               = "其他";
+"CREDIT_OR_DEBIT_CARD_LABEL"                = "信用卡或借记卡";
+"RECENT_LABEL"                              = "最近";
+"SELECT_PAYMENT_LABEL"                      = "选择付款方式";
+
+"CONFIRM_ENROLLMENT_LABEL"                  = "确认登记";
+"CONFIRM_ACTION"                            = "确认";
+"ENTER_SMS_CODE_SENT_HELP_LABEL"            = "输入发送到%s的短信验证码";
+"SMS_CODE_LABEL"                            = "短信验证码";
+"CARD_TYPE_GENERIC_CARD"                    = "卡";
+"MOBILE_COUNTRY_CODE_LABEL"                 = "国家/地区代码";
+"SECURITY_CODE_LABEL"                       = "安全代码";
+"CVV_FIELD_PLACEHOLDER"                     = "CVV";
+"CVC_FIELD_PLACEHOLDER"                     = "CVC";
+"CID_FIELD_PLACEHOLDER"                     = "CID";
+"CVN_FIELD_PLACEHOLDER"                     = "CVN";
+"POSTAL_CODE_PLACEHOLDER"                   = "邮政编码";
+"MOBILE_NUMBER_LABEL"                       = "预留手机号";
+"EXPIRATION_DATE_LABEL"                     = "有效期";
+"CARD_NUMBER_PLACEHOLDER"                   = "卡号";
+"EXPIRY_PLACEHOLDER_FOUR_DIGIT_YEAR"        = "MM/YYYY";
+"EXPIRY_PLACEHOLDER_TWO_DIGIT_YEAR"         = "MM/YY";
+"CARDHOLDER_NAME_LABEL"                     = "持卡人姓名";
+
+"PAYPAL"                                    = "贝宝";
+"CARD_TYPE_AMERICAN_EXPRESS"                = "American Express";
+"CARD_TYPE_DISCOVER"                        = "Discover";
+"CARD_TYPE_DINERS_CLUB"                     = "Diners Club";
+"CARD_TYPE_MASTER_CARD"                     = "MasterCard";
+"CARD_TYPE_VISA"                            = "Visa";
+"CARD_TYPE_JCB"                             = "JCB";
+"CARD_TYPE_MAESTRO"                         = "Maestro";
+"CARD_TYPE_UNION_PAY"                       = "银联";
+"BRANDING_COINBASE"                         = "Coinbase";
+"BRANDING_VENMO"                            = "Venmo";
+"BRANDING_APPLE_PAY"                        = "Apple Pay";
+"BRANDING_ANDROID_PAY"                      = "Android Pay‏";
+"USE_DIFFERENT_PHONE_NUMBER_ACTION"         = "使用其他电话号码";
+"CARD_NOT_ACCEPTED_ERROR_LABEL"             = "卡未被接受";
+"SELECT_BANK_CARD"                          = "选择银行卡";
+"UQ_CARD_LIST"                              = "卡列表";
+"UQ_ADD_CARD"                               = "+ 添加";
+"UQ_SEND_CODE"                              = "发送验证码";
+"UQ_SELECT_CARD"                            = "选择付款卡";
+"UQ_WARNING"                                = "警告";
+"UQ_DELETE_CARD"                            = "是否要删除该卡号?";
+"UQ_MORE"                                   = "查看更多";
+"UQ_NO_CARD"                                = "未存在已绑定的银行卡";
+"UQ_DELETE"                                 = "删除";
+"UQ_UNBIND_CARD_MESSAGE"                    = "解除绑定?";
+"UQ_ADD_BANK_CARD"                          = "添加银联卡";
+"UQ_CARD_Security_Identification"           = "输入银行卡号进行安全识别";
+"UQ_SEND_ANAGIN"                            = "%ld秒后可再发送";

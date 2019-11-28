@@ -1,0 +1,6 @@
+framework module UQPayHostUI {
+  umbrella header "UQPayHostUI.h"
+
+  export *
+  module * { export * }
+}
