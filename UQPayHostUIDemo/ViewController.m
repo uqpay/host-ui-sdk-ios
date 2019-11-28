@@ -25,7 +25,7 @@
 
 - (IBAction)openUI:(id)sender {
     
-    self.hostViewController = [[UQHostUIViewController alloc]initWithModel:LOCALTYPE];
+    self.hostViewController = [[UQHostUIViewController alloc]initWithModel:TESTTYPE];
     self.hostViewController.token = self.textField.text;
     self.hostViewController.delegate = self;
     [self presentViewController:self.hostViewController animated:true completion:NULL];
