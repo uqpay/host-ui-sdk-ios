@@ -89,7 +89,7 @@
 "UQ_SELECT_CARD"                            = "Select Card";
 "UQ_WARNING"                                = "Warning";
 "UQ_DELETE_CARD"                            = "Do you want to unbind current card number?";
-"UQ_MORE"                                   = "More";
+"UQ_MORE"                                   = "CHECK MORE";
 "UQ_NO_CARD"                                = "No Bank Card Available";
 "UQ_DELETE"                                 = "DELETE";
 "UQ_UNBIND_CARD_MESSAGE"                    = "Revoke Card?";

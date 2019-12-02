@@ -155,7 +155,7 @@
     [self.cardNumberField updateConstraints];
     [UQDropInUIUtilities addSpacerToStackView:self.stackView beforeView:self.cardNumberField size:[UQUIKAppearance verticalFormSpace]];
     
-    self.formFields = @[self.expirationDateField, self.securityCodeField, self.mobilePhoneField, self.smsFormField];
+    self.formFields = @[self.expirationDateField, self.securityCodeField,self.mobilePhoneField, self.smsFormField];
     for (UQUIKFormField *formField in self.formFields) {
         [self.stackView addArrangedSubview:formField];
         NSLayoutConstraint *heightConstraint = [formField.heightAnchor constraintEqualToConstant:[UQUIKAppearance formCellHeight]];
@@ -381,7 +381,7 @@
     self.cardNumberField.topBorder = YES;
     self.mobilePhoneField.bottomBorder = YES;
     
-    NSArray *groupedFormFields = @[self.expirationDateField, self.securityCodeField, self.mobilePhoneField, self.postalCodeField];
+    NSArray *groupedFormFields = @[self.expirationDateField, self.securityCodeField,self.mobilePhoneField, self.postalCodeField];
     BOOL topBorderAdded = NO;
     UQUIKFormField* lastVisibleFormField;
     for (NSUInteger i = 0; i < groupedFormFields.count; i++) {
@@ -453,7 +453,9 @@
 }
 
 - (void)sendSMS:(UIButton *)btn success:(SendSuccess)smsSuccess{
-    if (self.cardNumber && self.cardNumber.length >0 && self.mobilePhoneField.text && self.mobilePhoneField.text.length > 0) {
+    if (self.cardNumber && self.cardNumber.length >0 &&
+        self.mobilePhoneField.text &&
+        self.mobilePhoneField.text.length > 0) {
         [[UQHttpClient sharedInstance]getSms:@{@"cardNum":self.cardNumber, @"phone":self.mobilePhoneField.text} success:^(NSDictionary * _Nonnull dict, BOOL isSuccess) {
             if (isSuccess) {
                 if (dict != nil) {

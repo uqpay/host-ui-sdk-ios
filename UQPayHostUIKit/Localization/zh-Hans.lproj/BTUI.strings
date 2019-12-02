@@ -53,7 +53,7 @@
 "ENTER_SMS_CODE_SENT_HELP_LABEL"            = "输入发送到%s的短信验证码";
 "SMS_CODE_LABEL"                            = "短信验证码";
 "CARD_TYPE_GENERIC_CARD"                    = "卡";
-"MOBILE_COUNTRY_CODE_LABEL"                 = "国家/地区代码";
+"MOBILE_COUNTRY_CODE_LABEL"                 = "国家代码";
 "SECURITY_CODE_LABEL"                       = "安全代码";
 "CVV_FIELD_PLACEHOLDER"                     = "CVV";
 "CVC_FIELD_PLACEHOLDER"                     = "CVC";

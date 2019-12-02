@@ -265,9 +265,9 @@
 - (void)updateTooolbar {
     UILabel *titleLabel = [UQUIKAppearance styledNavigationTitleLabel];
     titleLabel.text = UQUIKLocalizedString(SELECT_BANK_CARD);
-    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textAlignment = NSTextAlignmentLeft;
     [titleLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisHorizontal];
-    titleLabel.tintColor = [UQUIKAppearance sharedInstance].cardTitleColor;
+    titleLabel.textColor = [UIColor colorWithRed:148./255 green:148./255 blue:148./255 alpha:1];
     titleLabel.font = [UIFont systemFontOfSize:17];
     [titleLabel sizeToFit];
     UIBarButtonItem *barTitle = [[UIBarButtonItem alloc] initWithCustomView:titleLabel];
@@ -276,10 +276,9 @@
     fixed.width = 1.0;
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:[UQImageUtils cardIcon] style:UIBarButtonItemStyleDone target:self action:nil];
     leftItem.tintColor = [UIColor colorWithRed:148./255 green:148./255 blue:148./255 alpha:1];
-    [self.toolbar setItems:@[leftItem, flex, barTitle, flex, fixed] animated:YES];
+    [self.toolbar setItems:@[leftItem, barTitle, flex, fixed] animated:YES];
     [self.toolbar invalidateIntrinsicContentSize];
 }
-
 
 - (void)cancel {
     [self dismissViewControllerAnimated:YES completion:NULL];
@@ -304,7 +303,7 @@
         [self.contentView addSubview:self.cardItemView];
         
         [self.contentView addSubview:self.moreBtn];
-        self.moreBtn.center = CGPointMake(CGRectGetWidth(self.contentView.bounds)/2, CGRectGetMaxY(self.cardItemView.frame) + CGRectGetHeight(self.moreBtn.bounds) /2 + 20);
+        self.moreBtn.center = CGPointMake(CGRectGetWidth(self.contentView.bounds)/2, CGRectGetMaxY(self.cardItemView.frame) + CGRectGetHeight(self.moreBtn.bounds) /2 + 40);
     } else {
         self.unExistCardLabel.center = CGPointMake(CGRectGetWidth(self.contentView.bounds) /2 , 88 + CGRectGetHeight(self.unExistCardLabel.bounds) /2);
         [self.contentView addSubview:self.unExistCardLabel];
