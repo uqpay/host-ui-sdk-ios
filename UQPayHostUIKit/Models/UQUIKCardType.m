@@ -48,7 +48,7 @@
         _validNumberPrefixes = prefixes;
         _relaxedPrefixes = relaxedPrefixes;
         if (error != nil) {
-            NSLog(@"Braintree-Payments-UIKit: %@", error);
+            NSLog(@"UQPAY-Host-UIKit: %@", error);
         }
         _validNumberLengths = validLengths;
         _validCvvLength = cvvLength;

@@ -59,7 +59,7 @@
         _tableView.tableFooterView = [UIView new];
         _tableView.vc = self;
         _tableView.deleteCard = ^(NSInteger index) {
-            [[UQHttpClient sharedInstance]postCardRevoke:@{@"cardToken": [self.data[index] objectForKey:@"uuid"] } success:^(NSDictionary * _Nonnull dict, BOOL isSuccess) {
+            [[UQHttpClient sharedInstance]postCardRevoke:@{@"cardToken": [self.data[index] objectForKey:@"cardToken"] } success:^(NSDictionary * _Nonnull dict, BOOL isSuccess) {
                 if (isSuccess && dict != nil) {
                     if ([[dict objectForKey:@"status"] intValue] == 200) {
                         [self.data removeObjectAtIndex:index];

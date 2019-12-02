@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "uqpay-hostui"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "uqpay-hostui :A modern foundation for accepting payments."
   s.description  = <<-DESC
                       uqpay-host-ui is a full-stack payments platform for developers
