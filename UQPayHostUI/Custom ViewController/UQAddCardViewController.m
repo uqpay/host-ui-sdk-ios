@@ -225,7 +225,13 @@
 
 - (void)cancelTapped {
     [self hideKeyboard];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UIViewController *rootVC = self.presentingViewController;
+    while (rootVC.presentingViewController) {
+        rootVC = rootVC.presentingViewController;
+    }
+    [self dismissViewControllerAnimated:YES completion:^{
+        [rootVC dismissViewControllerAnimated:YES completion:nil];
+    }];
 }
 
 - (void)tokenizedCard {

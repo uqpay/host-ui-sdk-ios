@@ -75,8 +75,15 @@
     return _tableView;
 }
 
--(void)cancelTapped {
-    [self dismissViewControllerAnimated:YES completion:nil];
+-(void)cancelTapped {    
+    UIViewController *rootVC = self.presentingViewController;
+    while (rootVC.presentingViewController) {
+        rootVC = rootVC.presentingViewController;
+    }
+    [self dismissViewControllerAnimated:YES completion:^{
+        [rootVC dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
 }
 
 - (void)addCard {
