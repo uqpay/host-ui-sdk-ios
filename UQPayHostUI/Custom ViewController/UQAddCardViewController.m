@@ -14,8 +14,7 @@
 #import "../Models/CardModel.h"
 #import "../Models/ResultModel.h"
 #import "../Public/UQHostResult.h"
-
-
+#import "WHToast.h"
 
 @interface UQAddCardViewController()
 
@@ -260,19 +259,33 @@
 
         [[UQHttpClient sharedInstance]addCard:addCardModel success:^(NSDictionary * _Nonnull dict, BOOL isSuccess) {
             if (isSuccess && dict) {
-                NSDictionary* date = [dict objectForKey:@"data"];
-                UQHostResult *resultModel = [[UQHostResult alloc]initWithDictionary:date error:nil];
-
-                [self dismissViewControllerAnimated:YES completion:^{
-                    if (self.delegate && [self.delegate respondsToSelector:@selector(UQHostResult:)]) {
-                        [self.delegate UQHostResult:resultModel];
+                NSDictionary* data = [dict objectForKey:@"data"];
+                if (data != nil) {
+                    NSError *error = nil;
+                    UQHostResult *resultModel = [[UQHostResult alloc]initWithDictionary:data error:&error];
+                    if (error != nil) {
+                        self.navigationItem.rightBarButtonItem = addCardButton;
+                        self.view.userInteractionEnabled = YES;
+                        [WHToast showMessage:dict[@"message"] duration:2 finishHandler:nil];
+                        return;
                     }
-                }];
+                    [self dismissViewControllerAnimated:YES completion:^{
+                        if (self.delegate && [self.delegate respondsToSelector:@selector(UQHostResult:)]) {
+                            [self.delegate UQHostResult:resultModel];
+                        }
+                    }];
+                }else{
+                    self.navigationItem.rightBarButtonItem = addCardButton;
+                    self.view.userInteractionEnabled = YES;
+                    [WHToast showMessage:dict[@"message"] duration:2 finishHandler:nil];
+                    return;
+                }
             }
         } fail:^(NSError * _Nonnull error) {
             NSLog(@"error = %@",error);
             self.navigationItem.rightBarButtonItem = addCardButton;
             self.view.userInteractionEnabled = YES;
+            [WHToast showMessage:error duration:2 finishHandler:nil];
         }];
     }
 }
@@ -459,21 +472,42 @@
 }
 
 - (void)sendSMS:(UIButton *)btn success:(SendSuccess)smsSuccess{
-    if (self.cardNumber && self.cardNumber.length >0 &&
-        self.mobilePhoneField.text &&
-        self.mobilePhoneField.text.length > 0) {
+    NSString* mobilePhone = self.mobilePhoneField.text;
+    NSArray<NSString*>* array = [mobilePhone componentsSeparatedByString:@"-"];
+
+    if (array[0].length == 0){
+        //提示输入国家/地区号
+        [WHToast showMessage:UQUIKLocalizedString(COUNTRY_CODE_REQUIRED) duration:2 finishHandler:nil];
+        return;
+    }else if (array[1].length == 0) {
+        //提示输入手机号
+        [WHToast showMessage:UQUIKLocalizedString(MOBILE_NUMBER_REQUIRED) duration:2 finishHandler:nil];
+        return;
+    }
+    
+    if (self.cardNumber && self.cardNumber.length >0) {
         [[UQHttpClient sharedInstance]getSms:@{@"cardNum":self.cardNumber, @"phone":self.mobilePhoneField.text} success:^(NSDictionary * _Nonnull dict, BOOL isSuccess) {
             if (isSuccess) {
                 if (dict != nil) {
                     NSDictionary *data = [dict objectForKey:@"data"];
-                    NSError *error;
-                    SMSModel *model = [[SMSModel alloc]initWithDictionary:data error:&error];
-                    self.uqOrderId = model.uqOrderId;
-                    smsSuccess(true);
+                    if (data != nil) {
+                        NSError *error;
+                        SMSModel *model = [[SMSModel alloc]initWithDictionary:data error:&error];
+                        if (error != nil) {
+                            [WHToast showMessage:dict[@"message"] duration:2 finishHandler:nil];
+                            return;
+                        }
+                        self.uqOrderId = model.uqOrderId;
+                        smsSuccess(true);
+                    }else {
+                        [WHToast showMessage:dict[@"message"] duration:2 finishHandler:nil];
+                    }
+
                 }
             }
         } fail:^(NSError * _Nonnull error) {
             NSLog(@"error %@",error);
+            [WHToast showMessage:error duration:2 finishHandler:nil];
         }];
     }
 }
@@ -482,6 +516,7 @@
 - (void)nextButtonAction {
     
     if (![self validateCardNumber]){
+        [WHToast showMessage:UQUIKLocalizedString(VALID_CARD_ERROR_LABEL) duration:2 finishHandler:nil];
         return ;
     }
     if (_needPostCardInfo) {
@@ -505,10 +540,12 @@
 
 - (BOOL)validateAddCard {
     NSArray * array = @[self.expirationDateField, self.mobilePhoneField, self.smsFormField];
+    NSArray * message = @[UQUIKLocalizedString(EXPIRATION_REQUIRED), UQUIKLocalizedString(MOBILE_NUMBER_REQUIRED), UQUIKLocalizedString(SMS_CODE_REQUIRED)];
     
     for (int i=0; i < array.count; i++) {
         UQUIKFormField *formField = array[i];
         if (!formField.text.length){
+            [WHToast showMessage:message[i] duration:2 finishHandler:nil];
             return false;
         }
     }
