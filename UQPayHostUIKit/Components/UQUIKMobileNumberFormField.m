@@ -37,9 +37,8 @@
         NSLayoutConstraint *rightConstraint = [NSLayoutConstraint constraintWithItem:self.accessoryView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
         NSLayoutConstraint *bottmConstraint = [NSLayoutConstraint constraintWithItem:self.accessoryView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.textField attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
         NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self.accessoryView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.textField attribute:NSLayoutAttributeWidth multiplier:1.5 constant:0];
-        NSArray *array = [NSArray arrayWithObjects:topConstraint, leftConstraint, rightConstraint, bottmConstraint, widthConstraint];
+        NSArray *array = [NSArray arrayWithObjects:topConstraint, leftConstraint, rightConstraint, bottmConstraint, widthConstraint,nil];
         [self addConstraints:array];
-        
     }
     return self;
 }

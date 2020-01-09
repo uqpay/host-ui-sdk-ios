@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.textField.text = @"";
+    self.textField.text = @"da03439ebc1d4e5d8658556cd56a8b47";
 }
 
 - (IBAction)openUI:(id)sender {
